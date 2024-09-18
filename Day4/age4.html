@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+
+        // Age Group
+        var age=+prompt("Enter our age: ")
+    
+    
+        // nested ternary operator
+        var agegroup=(age>0 && age<12)? "CHILD" : ((age>13) && (age<19))? "TEEN" : ((age>20)&&(age<64))? "ADULT": (age>65)? "SENIOR": "Enter the right age";
+        console.log(agegroup);
+        
+        </script>
+    
+</body>
+</html>

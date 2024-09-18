@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    // Temperature Check
+    var t=+prompt("Enter the temperature value : ")
+
+
+    // nested ternary operator
+    var result=t>30? "HOT" : ((t>20) && (t<20))? "WARM" : ((t>10)&&(t<19))? "COOL": (t<10)? "COLD": "Enter the correct temperature";
+    console.log(result);
+    
+    </script>
+    
+</body>
+</html>
