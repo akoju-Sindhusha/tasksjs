@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic light simulation</title>
+</head>
+<body>
+
+    <script>
+        
+        let light=prompt("Enter the traffic signal color : ");
+
+        switch (light){
+         
+            case "red": 
+                console.log("\"Red light– Stop, do not proceed. \"");
+                break;
+
+             case "green": 
+                console.log("\"Green light- Proceed if the intersection or crossing is clear \"");
+                break;
+
+             case "yellow": 
+                console.log("\"Yellow light- Get ready to proceed\"");
+                break;
+            
+            default: 
+            console.log("Enter the correct traffic signal color lowercase!");
+            
+        }
+    </script>
+    
+</body>
+</html>

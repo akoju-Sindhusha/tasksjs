@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+</head>
+<body>
+
+    <script>
+
+var value1=+prompt("Enter the first value :");
+var value2=+prompt("Enter the second value :");
+
+var operator=prompt("Enter the operator :");
+
+
+ switch (operator){
+            case "+": 
+                console.log(value1+value2);
+                break;
+            case "-": 
+                console.log(value1-value2);
+                break;
+            case "/": 
+                console.log(value1/value2);
+                break;
+            case "*": 
+                console.log(value1*value2);
+                break;
+            case "**": 
+                console.log(value1**value2);
+                break;
+            case "%": 
+                console.log(value1%value2);
+                break;
+        
+            default: 
+            console.log("Enter the valid operator : ");
+        }
+    </script>
+    
+    
+</body>
+</html>
