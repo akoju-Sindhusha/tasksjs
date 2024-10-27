@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="cls">some content 1</div>
+    <div class="cls">some content 2</div>
+    <div class="cls">some content 3</div>
+    <div class="cls">some content 4</div>
+    <div class="cls">some content 5</div>
+
+
+                 <!-- how to access and modify the content -->
+    <script>
+                                  
+
+         
+        var divcls=document.getElementsByClassName("cls");
+
+        console.log(divcls);        
+
+        
+        // the output will be in array
+        // so For specific content get by indexing
+
+        // indexing only given to class no need give for id
+        console.log("get the content by indexing ");
+        
+        console.log(divcls[4]);
+        console.log(divcls[3]);
+        console.log(divcls[2]);
+        console.log(divcls[1]);
+        console.log(divcls[0]);
+        
+
+        // how to access the content in DOM
+        console.log(divcls[4].innerText);
+        console.log(divcls[1].innerHTML);   //output is in console
+
+        // how to chance the content 
+        let contentchange="here the content is changed";
+        divcls[3].innerText=contentchange;   //output is in webpage
+
+        
+    </script>
+    
+</body>
+</html>

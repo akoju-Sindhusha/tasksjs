@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function avg(arr){
+            sum=0;
+            for(i=0;i<arr.length;i++){
+                sum+=arr[i];
+            }
+            return sum/arr.length;
+        }
+        arr=[5,10,20,30,40,50,60];
+        cal1=avg(arr);
+        console.log("the average of given array is :"+cal1);
+        arr=[0,0,0,0,[0,0,0,0,0,0]];
+        cal2=avg(arr);
+        console.log("the average of given array is :"+cal2);
+        arr=[12,6,2003,"june"];
+        cal3=avg(arr);
+        console.log("the average of given array is :"+cal3);
+        arr=[1,2,3,4];
+        cal4=avg(arr);
+        console.log("the average of given array is :"+cal4);
+        
+
+    </script>
+    
+</body>
+</html>

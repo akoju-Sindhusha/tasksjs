@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let str=prompt("enter the striing:");
+
+        function string(str){
+            let vowels=["a","e","i","o","u","A","E","I","O","u"];
+            for(letters of str){
+                if(vowels.includes(letters)){
+                    return true;
+                }
+            }
+            return false;
+        }
+        if(string(str)){
+            console.log(str+" "+"contains vowels");
+            
+        }else{
+            console.log(str+" "+"doesn't contains vowels");
+
+        }
+        
+    </script>
+    
+</body>
+</html>

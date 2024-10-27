@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- output is collection -->
+
+    <div class="cls">some content 1</div> 
+    <div class="cls">some content 2</div>
+    <div class="cls">some content 3</div>
+    <div class="cls">some content 4</div>
+    <div class="cls">some content 5</div>
+    <br>
+
+    
+
+                 <!--How to create an element and append -->
+    <script>
+                                  
+        var divcls=document.getElementsByClassName("cls");
+
+
+        // create an element
+        let ne=document.createElement("p");
+        ne.innerText="im creating the paragraph tag by using createElement and giving some styles to it";
+        ne.style.fontSize="35px";
+        ne.style.color="green";
+        console.log(ne);
+
+        // append an element
+        document.body.appendChild(ne)
+
+        // create and append btn
+        let btn=document.createElement("button");
+        document.body.appendChild(btn);
+        btn.innerText="click here";
+
+        btn.onclick=function clk(){          //d
+            let imgg=document.createElement("img");
+            imgg.src="farmimg.jpeg";
+        }
+        
+        console.log(btn)
+
+         
+
+        
+    </script>
+    
+</body>
+</html>

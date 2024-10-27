@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // name
+        let name=document.createElement("h1");
+        name.innerText="AKOJU SINDHUSHA";
+        name.style.textAlign="center";
+        // email id
+        let mail=document.createElement("h4");
+        mail.innerText="Email: akojusindhusha@gmail.com";
+        mail.style.textAlign="center";
+        // contact
+        let contact=document.createElement("h4");
+        contact.innerText="Contact: 8464062075";
+        contact.style.textAlign="center";
+        
+        document.body.append(name,mail,contact)   //append personal details
+
+        // profile summary
+        let profile=document.createElement("h3");
+        profile.innerText="Profile Summary";
+        let prohr=document.createElement("hr");
+        let para=document.createElement("p");
+        para.innerText="Motivated Front-End Developer with foundational skills in React.js and Flutter, eager to begin my professional career. Proficient in building engaging web applications with React and developing cross-platform mobile apps with Flutter. Excited to apply my skills, learn on the job, and contribute to impactful projects. Ready to collaborate with a talented team and grow as a developer.";
+
+        document.body.append(profile,prohr,para);   //appened profile summary
+
+        // education details
+        let edu=document.createElement("h3");
+        edu.innerText="Education";
+        let eduhr=document.createElement("hr");
+        let edu1=document.createElement("h4");
+        edu1.innerText="Vaageswari college of Engineering  (2021 – 2024)";
+        let edu2=document.createElement("p");
+        edu2.innerText="Bachelor of Technology in Electronics and communication Engineering";
+        let edu3=document.createElement("h4");
+        edu3.innerText="Jyothishmathi Institution of Technological Sciences (2018 – 2021)";
+        let edu4=document.createElement("p");
+        edu4.innerText="Diploma in Electronics and communication Engineering";
+
+        document.body.append(edu,eduhr,edu1,edu2,edu3,edu4)    //append education details
+
+
+
+        // technical skills
+        let tech=document.createElement("h3");
+        tech.innerText="Technical Skills";
+        let techr=document.createElement("hr");
+        let list=document.createElement("ul")
+        let u1=document.createElement("li");
+        u1.innerText="Front-end: HTML, CSS, JavaScript"
+        let u2=document.createElement("li");
+        u2.innerText="Back-end: Python";
+        let u3=document.createElement("li");
+        u3.innerText="Tools: Git, GitHub, VS code";
+        let u4=document.createElement("li");
+        u4.innerText="Database: MySQL";
+
+        document.body.append(tech,techr,list,u1,u2,u3,u4);   //append technical skills
+      
+        // soft skills
+        let soft=document.createElement("h3");
+        soft.innerText="Soft Skills";
+        let sfthr=document.createElement("hr");
+        let slist=document.createElement("ul")
+        let su1=document.createElement("li");
+        su1.innerText="Communication ";
+        let su2=document.createElement("li");
+        su2.innerText="Team work ";
+        let su3=document.createElement("li");
+        su3.innerText="Decision making ";
+        let su4=document.createElement("li");
+        su4.innerText="Time Management";
+
+        document.body.append(soft,sfthr,slist,su1,su2,su3,su4);   //append soft skills
+      
+        // other skills
+        let other=document.createElement("h3");
+        other.innerText="Other Skills";
+        let othr=document.createElement("hr");
+        let olist=document.createElement("ul")
+        let ou1=document.createElement("li");
+        ou1.innerText="Power point ";
+        let ou2=document.createElement("li");
+        ou2.innerText="MS office ";
+        let ou3=document.createElement("li");
+        ou3.innerText="MS excel ";
+        let ou4=document.createElement("li");
+        ou4.innerText="Windows";
+
+        document.body.append(other,othr,olist,ou1,ou2,ou3,ou4);   //append other skills
+      
+        
+        // declaration
+        let dec=document.createElement("h3");
+        dec.innerText="Declaration";
+        let dhr=document.createElement("hr");
+        let dpara=document.createElement("p");
+        dpara.innerText="I declare that the details provided in this resume are true and accurate to the best of my knowledge.";
+
+        document.body.append(dec,dhr,dpara); //append declaration
+
+        document.body.style.marginLeft="7%";
+        document.body.style.marginRight="7%";
+
+
+
+    </script>
+    
+</body>
+</html>

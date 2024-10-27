@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var temp=+prompt("enter temperature:-")
+        var scale=prompt("enter scale in uppercase(C/F):-")
+        res=0;
+
+        function tempconvert(a,b){
+            if(scale=="F"){
+               res=(temp-32)*5/9;
+               return res+"°C";
+            }
+            else if(scale=="C")
+            res=(temp*9/5)+32;
+            return res+"°F";
+        }
+        console.log(tempconvert());
+    </script>
+    
+</body>
+</html>
