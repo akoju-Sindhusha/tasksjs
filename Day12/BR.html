@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects Cards</title>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: auto auto auto auto; 
+            gap: 10px;
+        }
+      
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .child {
+            position: relative; 
+            overflow: hidden;   
+            height: 38vh;
+        }
+        .text{
+            position: absolute; 
+            top: 0%;      
+            color: white;     
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 2%;
+        }
+        h1{
+            color: rgba(20, 20, 20, 0.732);
+            text-align: center;
+            margin-top: 2%;
+        }
+    </style>
+</head>
+<body>
+    <h1>BR Architects</h1>
+
+    <div class="parent"></div>
+
+    <script>
+        var imgs = ["house1.jpg", "house2.jpg", "house3.jpg", "house4.jpg", "house2.jpg", "house1.jpg", "house4.jpg", "house3.jpg"];
+        var text = ["Summer house", "Brick house", "Renovated house", "Barn house", "Summer house 2", "Brick house 2", "Renovated house 2", "Barn house 2"];
+        var parent = document.querySelector(".parent");
+
+        
+
+        for (var i = 0; i < imgs.length; i++) {
+            var child = document.createElement("div");
+            child.className="child"
+            var child1 = document.createElement("img");
+            var child2 = document.createElement("div");
+            child2.className="text"
+
+            child1.src = imgs[i]; 
+            child2.innerText = text[i];
+
+            child.append(child1, child2);
+            parent.appendChild(child); 
+
+            console.log(parent);
+        }
+    </script>
+    
+</body>
+</html>

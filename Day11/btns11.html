@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Changer</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        #mainimg {
+            width: 50%; 
+            height: 60vh; 
+        }
+        div {
+            text-align: center;
+            margin-top: 3%;
+        }
+        button {
+            padding: 1%;
+            font-size: large;
+            margin-right: 1.8%;
+        }
+        button:hover {
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img src="mimg.jpg" id="mainimg" alt="Main Image">
+    </div>
+    <div class="btns">
+        <button id="b1">Image 1</button>
+        <button id="b2">Image 2</button>
+        <button id="b3">Image 3</button>
+        <button id="b4">Image 4</button>
+    </div>
+
+    <script>
+        let imgg = document.getElementById("mainimg");
+
+        function setImage(src, width, height) {
+            imgg.src = src;
+            imgg.style.width = width; // Set width
+            imgg.style.height = height; // Set height
+        }
+
+        document.getElementById("b1").addEventListener("click", () => {
+            setImage("img1.avif", "430px", "300px"); // Example size
+        });
+
+        document.getElementById("b2").addEventListener("click", () => {
+            setImage("img2.jpg", "430px", "300px"); // Example size
+        });
+
+        document.getElementById("b3").addEventListener("click", () => {
+            setImage("img3.jpg", "430px", "300px"); // Example size
+        });
+
+        document.getElementById("b4").addEventListener("click", () => {
+            setImage("img4.webp", "430px", "300px"); // Example size
+        });
+    </script>
+    
+</body>
+</html>

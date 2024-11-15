@@ -35,6 +35,34 @@
        parent.appendchild(child)
        console.log(child);
        }
+
+       /////inheritane
+
+
+
+class mobile{
+    company;
+    storage;
+    constructor(company,storage){
+        this.company=company;
+        this.storage=storage;
+    }
+}
+
+class Redmi extends mobile{
+    model;
+    price;
+    constructor(company,storage,model,price){
+        super(company,storage);
+        this.model=model;
+        this.price=price;
+    }
+}
+let mobile1=new Redmi("redmi","128","redmi 11t 5g","20,000");
+console.log(mobile1);
+
+encapsulation--hiding properties
+abstraction--hiding process
        */
       
        
