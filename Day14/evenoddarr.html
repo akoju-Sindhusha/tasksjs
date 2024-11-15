@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let arr=[33,12,1,6,31,27,63,24,4,2,0,6]
+        let even =[];
+        let odd=[];
+        evensum=0;
+        oddsum=0;
+        for(i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                even.push(arr[i])
+                evensum=evensum+arr[i];
+            }else{
+                odd.push(arr[i]);
+                oddsum=oddsum+arr[i];
+            }
+        }
+        console.log("even numbers are: "+even);
+        console.log("evensum is: "+evensum);
+        console.log("odd numbers are: "+odd);
+        console.log("odd numbers: "+oddsum);
+        
+        
+    </script>
+    
+</body>
+</html>

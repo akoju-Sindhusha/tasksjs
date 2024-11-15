@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let all=[true,2,12,"hello",false,0,7,"hi",6,"namaste",{name:"myname"},[2,4,6,8,[1,3,5,7,9]]];
+        let num=[];
+        let str=[];
+        let bln=[];
+        let obj=[];
+
+        for(i=0;i<all.length;i++){
+            switch (typeof(all[i])){
+                case "number":
+                    num.push(all[i]);
+                    break;
+                case "string":
+                    str.push(all[i]);
+                    break;
+                case "boolean":
+                    bln.push(all[i]);
+                    break;
+                case "object":
+                    obj.push(all[i]);
+                    break;
+                
+            }
+        }
+        console.log("numbers in given array:",num);
+        console.log("string in given array:",str);
+        console.log("boolean in given array:",bln);
+        console.log("object in given array:",obj);
+        
+    </script>
+    
+</body>
+</html>

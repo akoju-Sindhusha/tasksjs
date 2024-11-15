@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array iteration</title>
+</head>
+<body>
+
+    <script>
+        let arr=["oopiri","ega","hanu-mam","jersey","rrr","dhruva"];
+
+        console.log("iterating an array  by using");
+        console.log("1.for loop")
+         for(i=0;i<arr.length;i++){
+            console.log(arr[i])
+         }
+
+         console.log(" ");
+         
+        console.log("2.for-in loop")
+         for(i in arr){
+            console.log(arr[i]);   
+         }
+
+         console.log(" ");
+         
+        console.log("3.for-of loop")
+        for(i of arr){
+            console.log(i );
+        }
+    </script>
+    
+</body>
+</html>
