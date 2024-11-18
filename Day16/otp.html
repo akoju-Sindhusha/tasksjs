@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans',sans-serif;
+            font-size: larger;
+            margin-top: 12%;
+        }
+    </style>
+</head>
+<body>
+    <h1>OTP Generator</h1>
+
+    <input type="text" id="generator">
+    <button id="btn">Generate OTP</button>
+
+    <script>
+        let output=document.getElementById("generator");
+        let btn=document.getElementById("btn");
+
+        btn.addEventListener("click",()=>{
+            output.value=Math.floor(Math.random()*9000);
+        });
+    </script>
+    
+</body>
+</html>
