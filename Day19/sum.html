@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //    sum of numbers 
+    let arr=[1,2,3,4,5,6,7,8,9];
+    console.log("array:-",arr);
+    
+    let arr2=arr.reduce((acc,val,ind,arr)=>{
+        return acc+val
+    },0)
+    console.log("sum of the numbers:",arr2);
+    
+    </script>
+    
+</body>
+</html>

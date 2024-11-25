@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story Generator</title>
+    <style>
+        /* Basic Styling for the Story Generator */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .story-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3b5998;
+        }
+
+        .story-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .choices {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #3b5998;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #8b9dc3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="story-container">
+        <h1>Interactive Story</h1>
+        <div id="story-text" class="story-text"></div>
+        <div id="choices" class="choices"></div>
+    </div>
+
+    <script>
+        // Define the story structure
+        const story = {
+            start: {
+                text: "You find yourself standing in front of a dark forest. Do you enter or turn back?",
+                choices: [
+                    { text: "Enter the forest", nextScene: "forest" },
+                    { text: "Turn back", nextScene: "village" }
+                ]
+            },
+            forest: {
+                text: "The forest is eerily quiet. You hear a rustle in the bushes. Do you investigate or keep walking?",
+                choices: [
+                    { text: "Investigate", nextScene: "bear" },
+                    { text: "Keep walking", nextScene: "clearing" }
+                ]
+            },
+            clearing: {
+                text: "You come across a peaceful clearing with a small pond. Do you rest by the pond or continue walking?",
+                choices: [
+                    { text: "Rest by the pond", nextScene: "rest" },
+                    { text: "Continue walking", nextScene: "village" }
+                ]
+            },
+            bear: {
+                text: "A bear emerges from the bushes! It looks angry. Do you fight or run?",
+                choices: [
+                    { text: "Fight", nextScene: "end1" },
+                    { text: "Run", nextScene: "end2" }
+                ]
+            },
+            village: {
+                text: "You walk back to the village. It’s calm and peaceful. You feel safe.",
+                choices: [
+                    { text: "End the adventure", nextScene: "end3" }
+                ]
+            },
+            rest: {
+                text: "You rest by the pond and enjoy the peace. The sun sets, and you fall asleep.",
+                choices: [
+                    { text: "End the adventure", nextScene: "end3" }
+                ]
+            },
+            end1: {
+                text: "You bravely fight the bear, but it overpowers you. Game over!",
+                choices: [
+                    { text: "Restart", nextScene: "start" }
+                ]
+            },
+            end2: {
+                text: "You run away from the bear and make it back to the village. Safe, but shaken.",
+                choices: [
+                    { text: "Restart", nextScene: "start" }
+                ]
+            },
+            end3: {
+                text: "You decide to end the adventure here. Well done, adventurer!",
+                choices: [
+                    { text: "Restart", nextScene: "start" }
+                ]
+            }
+        };
+
+        // Define the current scene
+        let currentScene = "start";
+
+        // Function to update the story text and choices based on the current scene
+        function updateStory() {
+            const scene = story[currentScene];
+            const storyText = document.getElementById("story-text");
+            const choicesContainer = document.getElementById("choices");
+
+            // Update the story text
+            storyText.textContent = scene.text;
+
+            // Clear previous choices
+            choicesContainer.innerHTML = "";
+
+            // Display new choices
+            scene.choices.forEach(choice => {
+                const button = document.createElement("button");
+                button.textContent = choice.text;
+                button.onclick = () => {
+                    currentScene = choice.nextScene;
+                    updateStory();
+                };
+                choicesContainer.appendChild(button);
+            });
+        }
+
+        // Initialize the story
+        updateStory();
+    </script>
+
+</body>
+</html>
