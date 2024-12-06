@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        line-height: 2;
+      }
+      #div1 > div {
+        border: 3px solid black;
+        box-shadow: 1px  3px black;
+        border-radius: 3%;
+        height: 55vh;
+        width: 20vw;
+        margin: 10px;
+        padding: 10px;
+        margin-left: 4%;
+        font-size: large;
+        overflow: hidden;
+        line-height: 1.5;
+      }
+      img {
+        height: 20vh;
+      }
+      #close {
+        margin-left: 45%;
+        width: 10vw;
+        padding: 1%;
+        border-radius: 10px;
+        background-color: green;
+        font-size: large;
+      }
+      h1 {
+        text-align: center;
+        color: green;
+      }
+      #btn2 {
+        padding: 2%;
+        width: 8vw;
+        height: 5vh;
+        border-radius: 10px;
+        margin-top: 3%;
+        font-size: large;
+        margin-left: 30%;
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <h1>CART</h1>
+  <div id="div1"></div>
+  <br /><br />
+  <button onclick="back()" id="close">Back</button>
+  <body>
+    <script>
+      let updated = JSON.parse(localStorage.getItem("shoppingdata"));
+      console.log(updated);
+      new1 = updated.map((val) => {
+        let div1 = document.getElementById("div1");
+        let child = document.createElement("div");
+        let childa = document.createElement("div");
+        let childb = document.createElement("div");
+        let childc = document.createElement("div");
+        let childd = document.createElement("div");
+        let btn = document.createElement("button");
+        btn.setAttribute("id", "btn2");
+        btn.innerHTML = "Delete";
+        btn.addEventListener("click", () => {
+          child.style.display = "none";
+        });
+        let image = document.createElement("img");
+        image.src = val.image;
+        childa.innerHTML = "<b>" + "Id" + "</b>:" + val.id;
+        childb.innerHTML = "<b>" + "Title" + "</b>:" + val.title;
+        childc.innerHTML = "<b>" + "Price" + "</b>:" + val.price;
+        childd.innerHTML = "<b>" + "Category" + "</b>:" + val.category;
+        child.append(image, childa, childb, childc, childd, btn);
+        div1.append(child);
+      });
+      function back() {
+        window.close();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+            border: 3px solid black;
+            border-radius: 20px;
+            background-color:indianred;
+            padding: 3%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 32%;
+        }
+        h1{
+            text-align: center;
+        }
+        #d1,#d2{
+            border: 2px solid blacck;
+            background-color: white;
+            padding: 2%;
+            border-radius: 10px;
+        }
+
+</style>
+<body>
+    <h1><u>LOGIN DETAILS</u></h1>
+    <div class="container">
+        <div id="d1"></div> <br>
+        <div id="d2"></div>
+    </div>
+    <script>
+        let div1=document.getElementById("d1")
+        let div2=document.getElementById("d2")
+        let name=localStorage.getItem("username")
+        let age=localStorage.getItem("age")
+
+        div1.innerHTML="<b>"+"Username:"+"</b>"+name;
+        div2.innerHTML="<b>"+"Age:"+"</b>"+age;
+
+        console.log(name);
+        console.log(age);
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,11 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+    #container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+    }
+    #child {
+      border: 3px solid black;
+      box-shadow: 1px 3px black;
+      border-radius: 3%;
+      height: 60vh;
+      width: 20vw;
+      margin: 10px;
+      padding: 10px;
+      margin-left: 4%;
+      font-size: large;
+      overflow: hidden;
+      line-height: 1.5;
+    }
+    img {
+      height: 20vh;
+    }
+    #b_cart {
+      margin-left: 42%;
+      padding: 1%;
+      width: 15vw;
+      font-size: large;
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+      margin-top: 2%;
+    }
+    #btn {
+      background-color: lightgreen;
+      margin-left: 20%;
+      padding: 1%;
+      width: 8vw;
+      height: 5vh;
+      margin-top: 4%;
+      border-radius: 10px;
+      font-size: large;
+    }
+  </style>
+  <body>
+    <button onclick="cart()" id="b_cart">Add to Cart</button><br /><br />
+    <div id="container"></div>
+    <script>
+      let arr = [];
+      let main = document.getElementById("container");
+      async function card() {
+        res = await fetch("https://fakestoreapi.com/products");
+        let data = await res.json();
+        newdata = data.map((val) => {
+          let child = document.createElement("div");
+          child.setAttribute("id", "child");
+          let child1 = document.createElement("div");
+          let child2 = document.createElement("div");
+          let child3 = document.createElement("div");
+          let child4 = document.createElement("div");
+          let image = document.createElement("img");
+
+          image.src = val.image;
+          child1.innerHTML = "<b>" + "Id" + "</b>:" + val.id;
+          child2.innerHTML = "<b>" + "Title" + "</b>:" + val.title;
+          child3.innerHTML = "<b>" + "Price" + "</b>:" + val.price;
+          child4.innerHTML = "<b>" + "Category" + "</b>:" + val.category;
+
+          let btn = document.createElement("button");
+          btn.setAttribute("id", "btn");
+          btn.innerText = "Click";
+          btn.addEventListener("click", () => {
+            arr.push(val);
+            localStorage.setItem("shoppingdata", JSON.stringify(arr));
+          });
+          child.append(image, child1, child2, child3, child4, btn);
+          main.append(child);
+        });
+      }
+      card();
+
+      function cart() {
+        window.open("list.html");
+      }
+    </script>
+  </body>
 </html>

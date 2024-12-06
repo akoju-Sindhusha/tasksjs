@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 3px solid black;
+            border-radius: 20px;
+            background-color:indianred;
+            padding: 2%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin-left: 32%;
+        }
+        h1{
+            text-align: center;
+        }
+        #btn,input{
+            padding: 2%;
+            font-size: large;
+            border-radius: 10px;
+        }
+        #btn{
+            width: 40%;
+            margin-left: 28%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1><u>LOGIN FORM</u></h1>
+    <div class="container">
+        <input type="text" id="name" placeholder="enter your name"> <br>
+        <input type="text" id="age" placeholder="enter your age"> <br> <br>
+        <button id="btn" onclick="fun1()">submit form</button> <br>
+        <button id="btn" onclick="fun2()">login details</button>
+    </div>
+
+    <script>
+        let name=document.getElementById("name");
+        let age=document.getElementById("age");
+
+        function fun1(){
+            console.log(name.value);
+            console.log(age.value); 
+        }
+        function fun2(){
+            localStorage.setItem("username",name.value);
+            localStorage.setItem("age", age.value);
+            window.open("logindetails.html");
+        }
+    </script>
+    
+</body>
+</html>
